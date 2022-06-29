@@ -104,6 +104,22 @@ def _main():
         "Ukraine",
         "United Kingdom",
     ]
+    
+    southamerica_countries = [
+        "Brazil",
+        "Argentina",
+        "Uruguay",
+        "Paraguay",
+        "Peru",
+        "Chile",
+        "Colombia",
+        "Venezuela",
+        "Bolivia",
+        "Equatorial Guinea",
+        "Suriname",
+    ]
+    
+    #European Plots
     plot_data(
         data_dir / "time_series_covid19_confirmed_global.json",
         selection=european_contries,
@@ -116,6 +132,21 @@ def _main():
         selection=european_contries,
     )
     plt.savefig("top5-europe-deaths.svg", bbox_inches="tight", transparent=True)
+    plt.close()
+    
+    #South American Plots
+    plot_data(
+        data_dir / "time_series_covid19_confirmed_global.json",
+        selection=southamerica_countries,
+    )
+    plt.savefig("top5-SouthAmerica-infections.svg", bbox_inches="tight", transparent=True)
+    plt.close()
+
+    plot_data(
+        data_dir / "time_series_covid19_deaths_global.json",
+        selection=southamerica_countries,
+    )
+    plt.savefig("top5-SouthAmerica-deaths.svg", bbox_inches="tight", transparent=True)
     plt.close()
 
 
