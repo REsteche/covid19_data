@@ -1,4 +1,4 @@
-# COvid 19 World graphs
+# Covid 19 World graphs
 
 All data displayed here were obtained from the repository: COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University
 
