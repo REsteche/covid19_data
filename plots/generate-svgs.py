@@ -103,6 +103,7 @@ def _main():
         "Czechia",
         "Ukraine",
         "United Kingdom",
+        "Russia",
     ]
     
     southamerica_countries = [
@@ -117,6 +118,26 @@ def _main():
         "Bolivia",
         "Equatorial Guinea",
         "Suriname",
+    ]
+    
+    asia_countries = [
+        "Japan",
+        "China",
+        "India",
+        "Korea, South",
+        "Korea, North",
+        "Indonesia",
+        "Thailand",
+        "Philippines",
+        "Vietnam",
+        "Singapore",
+        "United Arab Emirates",
+        "Taiwan*",
+        "Israel",
+        "Iran",
+        "Iraq",
+        "Bangladesh",
+        "Saudi Arabia",
     ]
     
     #European Plots
@@ -148,7 +169,21 @@ def _main():
     )
     plt.savefig("top5-SouthAmerica-deaths.svg", bbox_inches="tight", transparent=True)
     plt.close()
+    
+    #Asia Plots
+    plot_data(
+        data_dir / "time_series_covid19_confirmed_global.json",
+        selection=asia_countries,
+    )
+    plt.savefig("top5-Asia-infections.svg", bbox_inches="tight", transparent=True)
+    plt.close()
 
+    plot_data(
+        data_dir / "time_series_covid19_deaths_global.json",
+        selection=asia_countries,
+    )
+    plt.savefig("top5-Asia-deaths.svg", bbox_inches="tight", transparent=True)
+    plt.close()
 
 if __name__ == "__main__":
     _main()
