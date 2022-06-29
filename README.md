@@ -6,7 +6,7 @@ All data displayed here were obtained from the repository: COVID-19 Data Reposit
 
 ### Top 5 countries by daily infections (7-day average)
 
-![W_infections](/plots/top5-europe-infections.svg) 
+![W_infections](/plots/top5-world-infections.svg) 
 
 ### Top 5 countries by daily deaths (7-day average)
 
